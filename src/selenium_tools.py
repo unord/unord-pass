@@ -1,6 +1,8 @@
-from selenium import webdriver
+
 from selenium.webdriver.chrome.options import Options
 import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
 
@@ -10,7 +12,7 @@ def get_webdriver() -> webdriver:
     chrome_options.add_argument("--headless")  # Run Chrome in headless mode
 
     # Set path to the chromedriver executable (automatically downloads the latest version)
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
     return driver
 
 
