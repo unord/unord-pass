@@ -15,11 +15,11 @@ def change_password_in_studsys(driver: webdriver, search_user: str) -> tuple[str
     this_user = studsys.get_username(driver)
     this_mobile = studsys.get_mobile_number(driver)
     print(f"Found user: {this_user}, ({this_name}), ({this_mobile})")
-    print("*******************************************************************************\n")
+    print("**********************************************************************************\n")
     this_password = studsys.change_password(driver)
     sms_msg = studsys.create_msg(this_user, this_password)
     print("**********************************************************************************")
-    print(f"* Message copied to clipboard and ready to be sent to mobile: ({this_mobile}) *")
+    print(f"* Message copied to clipboard and ready to be sent to mobile: ({this_mobile})  *")
     print("**********************************************************************************")
     return sms_msg, this_mobile
 
