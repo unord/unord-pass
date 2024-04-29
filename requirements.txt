@@ -1,5 +1,6 @@
-﻿pyperclip==1.8.2
+﻿playwright==1.43.0
+pyperclip==1.8.2
 python-decouple==3.8
 requests~=2.31.0
-selenium==4.13.0
+selenium==4.20.0
 webdriver-manager==4.0.1
