@@ -4,15 +4,26 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.firefox import GeckoDriverManager
+from selenium.webdriver.firefox.options import Options
+
 
 
 def get_webdriver() -> webdriver:
     # Configure Chrome options
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")  # Run Chrome in headless mode
+      # Run Chrome in headless mode
 
     # Set path to the chromedriver executable (automatically downloads the latest version)
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
+    try:
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
+    except Exception as e:
+        firefox_options = Options()
+        firefox_options.add_argument("--headless")
+        driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=firefox_options)
     return driver
 
 
