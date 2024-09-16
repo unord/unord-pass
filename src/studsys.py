@@ -50,9 +50,9 @@ def create_msg(this_user: str, this_password: str) -> tuple[str, str]:
     # Colored message for terminal output
     colored_msg = (
         f"Du kan bruge de her oplysninger til Lectio, Office.com, Teams, fjernskrivebord(u-term.efif.dk) og logge på skolens WIFI(UNORD WIFI)\n\n"
-        f"Brugernavn er: {Fore.GREEN}{this_user}{Style.RESET_ALL}\n"
-        f"Adgangskode er: {Fore.GREEN}{this_password}{Style.RESET_ALL}\n"
-        f"Din skole email er: {Fore.GREEN}{this_user}@unord.dk{Style.RESET_ALL}\n\n"
+        f"Brugernavn er: {Fore.CYAN}{this_user}{Style.RESET_ALL}\n"
+        f"Adgangskode er: {Fore.CYAN}{this_password}{Style.RESET_ALL}\n"
+        f"Din skole email er: {Fore.CYAN}{this_user}@unord.dk{Style.RESET_ALL}\n\n"
         f"Du kan skifte din adgangskode på https://mobil.efif.dk\n"
         f"Hvis din konto har været låst går der 30 min før den bliver låst op.\n"
     )
