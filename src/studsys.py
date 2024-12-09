@@ -11,9 +11,10 @@ def change_password(page: Page) -> str:
     page.click("#showResetPasswordDialogButton")
 
     # If "resetLectioPasswordCheckBox" is not checked, then check it
-    checkbox_reset_password_lectio = page.query_selector("#resetLectioPasswordCheckBox")
-    if not checkbox_reset_password_lectio.is_checked():
-        checkbox_reset_password_lectio.click()
+    # Deprecated: checkbox_reset_password_lectio = page.query_selector("#resetLectioPasswordCheckBox")
+    #checkbox_reset_password_lectio = page.query_selector("#resetLectioPasswordCheckBox")
+    #if not checkbox_reset_password_lectio.is_checked():
+    #    checkbox_reset_password_lectio.click()
 
     # If "mustChangePasswordAtNextLogonCheckBox" is checked, then uncheck it
     checkbox_change_password_next_login = page.query_selector("#mustChangePasswordAtNextLogonCheckBox")
