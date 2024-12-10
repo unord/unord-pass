@@ -41,7 +41,7 @@ def change_password(page: Page) -> str:
 def create_msg(this_user: str, this_password: str) -> tuple[str, str]:
     # Plain message for SMS
     plain_msg = (
-        f"Du kan bruge de her oplysninger til Lectio, Office.com, Teams, fjernskrivebord(u-term.efif.dk) og logge på skolens WIFI(eduroam)\n\n"
+        f"Du kan bruge de her oplysninger til Office.com, Teams, fjernskrivebord(u-term.efif.dk) og logge på skolens WIFI(eduroam)\n\n"
         f"Brugernavn er: {this_user}\n"
         f"Adgangskode er: {this_password}\n"
         f"Din skole email er: {this_user}@unord.dk\n\n"
@@ -50,7 +50,7 @@ def create_msg(this_user: str, this_password: str) -> tuple[str, str]:
     )
     # Colored message for terminal output
     colored_msg = (
-        f"Du kan bruge de her oplysninger til Lectio, Office.com, Teams, fjernskrivebord(u-term.efif.dk) og logge på skolens WIFI(eduroam)\n\n"
+        f"Du kan bruge de her oplysninger til Office.com, Teams, fjernskrivebord(u-term.efif.dk) og logge på skolens WIFI(eduroam)\n\n"
         f"Brugernavn er: {Fore.CYAN}{this_user}{Style.RESET_ALL}\n"
         f"Adgangskode er: {Fore.CYAN}{this_password}{Style.RESET_ALL}\n"
         f"Din skole email er: {Fore.CYAN}{this_user}@unord.dk{Style.RESET_ALL}\n\n"
